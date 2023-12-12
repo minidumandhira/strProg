@@ -145,15 +145,19 @@ int main()
     {
       printf("invalid stamp value OR ivalid coin");
     }
-
-    printf("Do you want to do another transaction (y/n)?");
+  if((a*b*c*d >0) && (e*f*g>0)){
+    printf("\nDo you want to do another transaction (y/n)?");
     char conti;
     scanf(" %c", &conti);
     if (conti!='y')
     {
       break;
     }
-    
+    }
+  else{
+    printf("\nerror");
+    break;
+  }
   }
   while (1);
     
