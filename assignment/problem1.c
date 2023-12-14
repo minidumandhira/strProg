@@ -80,18 +80,21 @@ int main()
         printf("25coin amount:%d\n 10coin amount:%d\n 5coin amount:%d", --b, --c, --d);
        
       }
+      else{
+        printf("invalid coin\n");
+      }
     }
 
     else if (s == 15)
     {
       if (m == 5)
       {
-        printf("sorry,amount is insuficient for transaction");
+        printf("sorry,amount is insuficient for transaction\n");
         printf("amount of rs 15 stamp:%d", f);
       }
       else if (m == 10)
       {
-        printf("sorry,amount is insuficient for transaction");
+        printf("sorry,amount is insuficient for transaction\n");
         printf("amount of rs 15 stamp:%d", f);
       }
       else if (m == 25)
@@ -110,18 +113,21 @@ int main()
         printf("amount of rs 15 stamp:%d\n 50coin amount:%d\n 10coin amount:%d\n 25coin amount:%d", --f, ++a, --c, --b);
        
       }
+      else{
+        printf("invalid coin\n");
+      }
     }
     else if (s == 25)
     {
       if (m == 5)
       {
-        printf("sorry,amount is insuficient for transaction");
+        printf("sorry,amount is insuficient for transaction\n");
         printf("amount of rs 25 stamp:%d", g);
       }
       else if (m == 10)
       {
         printf("sorry,amount is insuficient for transaction");
-        printf("amount of rs 25 stamp:%d", g);
+        printf("\namount of rs 25 stamp:%d\n", g);
       }
       else if (m == 25)
       {
@@ -139,6 +145,9 @@ int main()
         printf("change is:rs%d\n", k);
         printf("amount of rs 25 stamp:%d\n 50coin amount:%d\n 25coin amount:%d", --g, ++a, --b);
        
+      }
+      else{
+        printf("invalid coin\n");
       }
     }
     else
