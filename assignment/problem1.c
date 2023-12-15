@@ -68,7 +68,7 @@ int main()
         
         printf("payment successful\n");
         printf("change is:rs%d\n", i + n);
-        printf("amount of rs 10 stamp:%d\n 25coin amount:%d", --e, ++b);
+        printf("amount of rs 10 stamp:%d\n 25coin amount:%d\n 10coin amount:%d", --e, ++b,--c);
         
       }
       else if (m == 50)

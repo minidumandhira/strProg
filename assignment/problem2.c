@@ -2,49 +2,84 @@
 
 int main()
 { 
-  int i,j,y,k;
-  int row=i;
-  int column=j;
-  int matrixY[6][1];
+  int i,j,m,n,sum;
 
-  int matrixA[6][8]={{1,2,3,4,5,6,7,8},
-                     {2,3,4,5,6,7,8,9},
-                     {3,4,5,6,7,8,9,10},
-                     {4,5,6,7,8,9,10,11},
-                     {5,6,7,8,9,10,11,12},
-                     {6,7,8,9,10,11,12,13}};
+  
 
-  int matrixX[8][1]={{1},{-8},{3},{-6},{5},{-4},{7},{-2}};
+  while (1)
+  {
 
-  //diplay matrix A
-  printf("matrixA:\n");
-   for(i=0;i<6;i++){
-    for(j=0;j<8;j++){
-      printf("%d ",matrixA[i][j]);
-    }
-    printf("\n");
+  printf("enter size of matrixA(m n) ");
+  scanf("%d" "%d",&m,&n);
+  if (m>0 && n>0)
+  {
+    break;
+  }
+  printf("\n enter positive value!\n");
+  }
+
+
+
+  int matrixY[m];
+
+  int matrixA[m][n];
+  int matrixX[n];
+
+ for (int i = 0; i < m; i++)
+ {
+  printf("enter %dst line\n",i+1);
+  for (int j = 0; j < n; j++)
+  {
+    printf("enter value for %dX%d: ",i+1,j+1);
+    scanf("%d",&matrixA[i][j]);
+  }
+  
+ }
+   printf("\nenter matrixX");
+   for (int i = 0; i < n; i++)
+   {
+    printf("enter value for %d line\n",i+1);
+    scanf("%d",&matrixX[i]);
    }
-   //display matrixB
-   printf("matrixB:\n");
-    for(i=0;i<8;i++){
-      printf("%d \n",matrixX[i][0]);
+
+ /*display matrixA*/  
+ printf("\n matrixA\n");
+  for (int i = 0; i < m; i++)
+  {
+    for (int j = 0; j <n ; j++)
+    {
+        printf("| %d |", matrixA[i][j]);
     }
-    //multiply AX
-    printf("matrixY:\n");
-     for(k=0;k<6;k++){
-       for(j=0;j<1;j++){
-        matrixY[k][0]=0;
-      for(i=0;i<8;i++){
-
-      matrixY[k][0]+=matrixA[k][i]*matrixX[i][0];
+      printf("\n");
+  }
+  
+  /*display matrixX*/
+  printf("\n matrixX\n");
+   for (int i = 0; i < n; i++)
+   {
+       printf("| %d |",matrixX[i]);
       
-      }
-      printf("%d \n",matrixY[k][0]);
-       }
-      
-     }
-     printf("\n");
-
+   
+   }
+    /*multiply matrixA and matrixX*/
+   printf("\nmatrixY:\n");
+   for (int i = 0; i < m; i++)
+   {
+    sum=0;
+    for(int j=0; j<n; j++){
+    sum+=matrixA[i][j]*matrixX[i];
+     
+    }
+    matrixY[i] = sum;
+   }
+   
+printf("matrixY:\n");
+   
+   for (int i = 0; i < m; i++)
+   {
+    printf("| %d |",matrixY[i]);
+   }
+   
 }   
 
     
