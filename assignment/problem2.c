@@ -57,7 +57,7 @@ int main()
   printf("\n matrixX\n");
    for (int i = 0; i < n; i++)
    {
-       printf("| %d |",matrixX[i]);
+       printf("| %d |\n",matrixX[i]);
       
    
    }
@@ -77,7 +77,7 @@ printf("matrixY:\n");
    
    for (int i = 0; i < m; i++)
    {
-    printf("| %d |",matrixY[i]);
+    printf("| %d |\n",matrixY[i]);
    }
    
 }   
